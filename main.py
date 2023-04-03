@@ -52,11 +52,11 @@ def stock_film():
         acteurs = movie['Actors'].split(', ')
         paul_walker = True if 'Paul Walker' in acteurs else False
         # Récupérer les acteurs en commun avec les films Star Wars
-        response = requests.get('http://www.omdbapi.com/', params={'s': 'Star Wars', 'apikey': 'votre_api_key'})
+        response = requests.get('http://www.omdbapi.com/', params={'s': 'Star Wars', 'apikey': OMDB_KEY})
         data = response.json()
         star_wars_actors = set()
         for movie in data['Search']:
-            response = requests.get('http://www.omdbapi.com/', params={'t': movie['Title'], 'apikey': 'votre_api_key'})
+            response = requests.get('http://www.omdbapi.com/', params={'t': movie['Title'], 'apikey': OMDB_KEY})
             data = response.json()
             actors = data['Actors'].split(', ')
             star_wars_actors.update(set(actors))
