@@ -27,7 +27,7 @@ Pour plus d'informations sur la création de ce fichier, consultez la documentat
 Exécuter l'application à l'aide de la commande suivante :
 
 ```bash
-python app.py
+python main.py
 ```
 
 L'application est maintenant accessible à l'adresse http://localhost:5000.
@@ -42,7 +42,7 @@ Pour une montée en charge du système, il est possible d'utiliser un service de
 **Forces**
 L'application est facile à utiliser et à déployer.
 Les données sont stockées de manière sécurisée dans un Google Spreadsheet.
-La mise en cache des données permet d'améliorer les performances de l'application.
+
 
 **Faiblesses**
 La sécurité de l'application est limitée à une simple authentification de base.
